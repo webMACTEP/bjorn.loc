@@ -1,0 +1,19 @@
+{
+  "name": "webp-converter-for-media",
+  "description": "WebP Converter for Media",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Mateusz Gbiorczyk",
+      "email": "mateusz@gbiorczyk.pl",
+      "homepage": "https://gbiorczyk.pl/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "WebpConverter\\": "app"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

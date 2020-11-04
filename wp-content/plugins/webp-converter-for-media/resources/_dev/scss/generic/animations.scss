@@ -1,0 +1,15 @@
+@keyframes dotsLoading {
+
+  0%, 100% {
+    content: '...';
+  }
+  25% {
+    content: '\a0..';
+  }
+  50% {
+    content: '.\a0.';
+  }
+  75% {
+    content: '..\a0';
+  }
+}

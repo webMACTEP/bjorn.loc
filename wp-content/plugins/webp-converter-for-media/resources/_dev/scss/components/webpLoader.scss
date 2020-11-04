@@ -1,0 +1,158 @@
+.webpLoader {
+
+  &__status {
+    padding: 20px 0 10px 0;
+  }
+
+  /* ---
+    Bar
+  --- */
+
+  &__bar {
+    
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__barProgress {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    height: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: $c-green-01;
+      transition: width $tr;
+    }
+
+    &--error:before {
+      background-color: $c-red-01;
+    }
+      
+    @for $i from 0 to 101 {
+
+      &[data-percent="#{$i}"]:before {
+        width: $i * 1%;
+      }
+    }
+  }
+
+  &__barCount {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-white;
+    background-color: $c-green-01;
+
+    @at-root .webpLoader__barProgress--error & {
+      background-color: $c-red-01;
+    }
+
+    &:after {
+      content: '...';
+      margin-left: 5px;
+      animation: dotsLoading 1s linear infinite;
+
+      @at-root .webpLoader__barProgress[data-percent="100"] & {
+        display: none;
+      }
+
+      @at-root .webpLoader__barProgress--error & {
+        display: none;
+      }
+    }
+      
+    @for $i from 0 to 101 {
+
+      @at-root .webpLoader__barProgress[data-percent="#{$i}"] &:before {
+        content: '#{$i}%';
+      }
+    }
+  }
+
+  /* ---
+    Size
+  --- */
+
+  &__size {
+    margin-bottom: -10px;
+    padding: 4px 0;
+    font-size: 14px;
+    line-height: 1.64;
+  }
+
+  &__sizeProgress {
+    font-weight: 500;
+  }
+
+  /* ---
+    Success
+  --- */
+
+  &__success {
+    margin-top: 20px;
+    padding: 4px 0 4px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.64;
+    color: $c-green-01;
+    border-left: 2px solid $c-green-01;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  /* ---
+    Errors
+  --- */
+
+  &__errors {
+    margin-top: 20px;
+    border-left: 2px solid $c-red-01;
+  }
+
+  &__errorsTitle {
+    display: inline-block;
+    padding: 4px 22px;
+    font-size: 14px;
+    line-height: 1.64;
+    color: white;
+    background-color: $c-red-01;
+  }
+
+  &__errorsContent {
+    padding: 14px 0 14px 20px;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  &__errorsContentMessage {
+    font-weight: 500;
+    color: $c-red-01;
+      font-size: 14px;
+      line-height: 1.64;
+  }
+
+  /* ---
+    Button
+  --- */
+
+  &__button {
+
+    &--disabled {
+      pointer-events: none;
+      opacity: .25 !important;
+    }
+  }
+}

@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Bjorn Motors</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Bjorn Motors" name="description">
+  <!-- Favicons -->
+  <link href="img/logo.png" rel="icon">
+  <!-- Normalize CSS File -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <!-- Bootstrap GRID CSS File -->
+  <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+  <!-- Pushy CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.3.0/css/pushy.css" integrity="sha256-xBbk1z+60pttKg5n14bvt+NjdxcOxd7LrRcRFuISfFY=" crossorigin="anonymous" />  
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/> 
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="css/animate.min.css">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/media.css" rel="stylesheet"> 
+  <!--Fancybox CSS-->
+  <link href="lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+</head>
+<body class="body">
+  <!-- Pushy Menu -->
+  <nav class="pushy pushy-left" data-focus="#first-link">
+    <div class="pushy-content">
+      <ul>
+        <li class="pushy-link"><a href="">Главная</a></li>
+        <li class="pushy-link"><a href="">Услуги и цены</a></li>
+        <li class="pushy-link"><a href="">Акции</a></li>
+        <li class="pushy-link"><a href="">Отзывы</a></li>
+        <li class="pushy-link"><a href="">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="site-overlay"></div>
+  <button class="pushy-btn">&#9776;</button>
+  <!-- Popup--> 
+  <div class="popup__wrapp opinion" id="popup__opinion">
+    <div class="popup__content">
+      <div class="popup__title">Спасибо!</div>
+      <div class="popup__subtitle">Мы обязательно учтём ваше мнение</div>
+      <img src="img/header/logo.svg" class="popup__logo">
+      <img src="img/icons/close-popup.svg" class="popup_close">
+    </div>
+  </div>
+  <div class="popup__wrapp thanks" id="popup__thanks">
+    <div class="popup__content">
+      <div class="popup__title">Спасибо!</div>
+      <div class="popup__subtitle">Мы свяжемся с вами в течение 3-х мин.</div>
+      <div class="popup__timer">
+        
+      </div>
+      <img src="img/header/logo.svg" class="popup__logo">
+      <img src="img/icons/close-popup.svg" class="popup_close">
+    </div>
+  </div>
+  <div class="popup__wrapp callback" id="popup__callback">
+    <form class="popup__content popup__form" method="post">
+      <div class="popup__title">Заказать обратный звонок</div>
+      <div class="popup__flex">
+        <img src="img/header/logo.svg" class="popup__logo">
+        <div class="popup__inputs">
+          <div class="popup__label">Ваше имя</div>
+          <input type="hidden" name="titleform" value="Заявка Bjorn 'Обратный звонок'">
+          <input type="text" class="popup__input" name="name" placeholder="необязательно">
+          <div class="popup__label">Номер вашего телефона</div>
+          <input type="text" class="popup__input" name="phone" required placeholder="*обязательно">
+        </div>
+      </div>
+      <button class="popup__submit" type="submit">Заказать</button>
+      <img src="img/icons/close-popup.svg" class="popup_close">
+    </form>
+  </div>
+  <div class="popup__wrapp rerairs" id="popup__repairs">
+    <form class="popup__content popup__form" method="post">
+      <div class="popup__title">Записаться на ремонт</div>
+      <div class="popup__flex">
+        <img src="img/header/logo.svg" class="popup__logo">
+        <div class="popup__inputs">
+          <input type="hidden" name="titleform" value="Заявка Bjorn 'Запись на ремонт'">
+          <div class="popup__label">Ваше имя</div>
+          <input type="text" class="popup__input" name="name" placeholder="необязательно">
+          <div class="popup__label">Номер вашего телефона</div>
+          <input type="text" class="popup__input" name="phone" required placeholder="*обязательно">
+        </div>
+      </div>
+      <button class="popup__submit" type="submit">Записаться</button>
+      <img src="img/icons/close-popup.svg" class="popup_close">
+    </form>
+  </div>
+  <header class="header" id="header">
+    <div class="pad"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__content">
+            <div class="header__left">
+              <div class="header__left__address">ул.Уличная, д.3с1</div>
+              <a href="#" class="header__left__btn">
+                <img src="img/header/map.svg" class="header__left__btn__ico">
+                <div class="header__left__btn__title">Схема проезда</div>
+              </a>
+              <div class="header__left__btn__schedule">
+                Работаем с <strong class="strong">09:00</strong> до <strong class="strong">21:00</strong><br>
+                без выходных и праздников
+              </div>
+            </div>
+            <div class="header__center">
+              <img src="img/header/logo-title.svg" class="header__logo-title">
+              <img src="img/header/logo.svg" class="header__logo">
+            </div>
+            <div class="header__right">
+              <a href="tel:+74957447474" class="header__right__phone">+7 (495) 744-74-74</a>
+              <div class="header__right__btn">Заказать звонок</div>
+              <div class="header__right__social">
+                <a href="#" class="header__right__social__link" id="whatsapp__link">
+                  <img src="img/header/whatsapp.svg" class="header__right__social__icon">
+                </a>
+                <a href="#" class="header__right__social__link" id="telegram__link">
+                  <img src="img/header/telegram.svg" class="header__right__social__icon">
+                </a>
+                <a href="#" class="header__right__social__link" id="viber__link">
+                  <img src="img/header/viber.svg" class="header__right__social__icon">
+                </a>
+                <a href="#" class="header__right__social__link" id="instagram__link">
+                  <img src="img/header/instagram.svg" class="header__right__social__icon">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#header" class="btn-top">
+      <img src="img/icons/top.svg">
+    </a>
+    <img src="img/icons/callback.svg" class="callback-btn">
+  </header>
+  <nav class="main-menu">
+    <ul class="main-menu__list">
+      <li class="main-menu__item">
+        <a href="#" class="main-menu__link">Главная</a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#" class="main-menu__link">Услуги и цены</a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#" class="main-menu__link">Акции</a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#" class="main-menu__link">Отзывы</a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#" class="main-menu__link">Контакты</a>
+      </li>
+    </ul>
+     <div class="menu__mobile">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="menu__mobile__flex">
+              <img src="img/header/logo-title.svg" class="menu__mobile__flex__icon">
+              <div class="menu__mobile__flex__btn">
+                <div class="menu-icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="slider">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="slider__container">
+            <div class="slider__main">
+              <div class="slider__slide">
+                <div class="slider__left">
+                  <div class="slider__left__title">
+                    Каждое 3 ТО<br> 
+                    <strong class="strong2">БЕСПЛАТНО</strong><br> 
+                    по работам
+                  </div>
+                  <ul class="slider__left__list">
+                    <li class="slider__left__item">Замена масла</li>
+                    <li class="slider__left__item">Замена 3-х фильтров</li>
+                    <li class="slider__left__item">Диагностика подвески</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slider__slide">
+                <div class="slider__left">
+                  <div class="slider__left__title">
+                    Каждое 3 ТО<br> 
+                    <strong class="strong2">БЕСПЛАТНО</strong><br> 
+                    по работам
+                  </div>
+                  <ul class="slider__left__list">
+                    <li class="slider__left__item">Замена масла</li>
+                    <li class="slider__left__item">Замена 3-х фильтров</li>
+                    <li class="slider__left__item">Диагностика подвески</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slider__slide">
+                <div class="slider__left">
+                  <div class="slider__left__title">
+                    Каждое 3 ТО<br> 
+                    <strong class="strong2">БЕСПЛАТНО</strong><br> 
+                    по работам
+                  </div>
+                  <ul class="slider__left__list">
+                    <li class="slider__left__item">Замена масла</li>
+                    <li class="slider__left__item">Замена 3-х фильтров</li>
+                    <li class="slider__left__item">Диагностика подвески</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <img src="img/slider/car.png" class="slider__car__img">
+            <img src="img/slider/leans.png" class="slider__car__leans">      
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="advantages__title">Наши принципы</div>
+          <div class="advantages__subtitle">
+            90% клиентов возвращаются к нам повторно и рекомендуют нас друзьям
+          </div>
+          <div class="advantages__flex">
+            <div class="advantages__item">
+              <div class="advantages__number">1</div>
+              <div class="advantages__box">
+                <div class="advantages__box__title">
+                  Честность <br>
+                  и открытость
+                </div>
+                <div class="advantages__box__subtitle">
+                  Нам важно ваше доверие! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__number">2</div>
+              <div class="advantages__box">
+                <div class="advantages__box__title">
+                  Грамотная <br>
+                  диагностика
+                </div>
+                <div class="advantages__box__subtitle">
+                  Мы уделяем большое внимание диагностике вашего автомобиля!
+                </div>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__number">3</div>
+              <div class="advantages__box">
+                <div class="advantages__box__title">
+                  Без переплат и <br>
+                  скрытых платежей
+                </div>
+                <div class="advantages__box__subtitle">
+                  Всегда согласовываем стоимость ремонта с вами заранее!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brands">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="brands__wrapp">
+            <div class="brands__text">
+              Марки а/м
+              с которыми мы
+              работаем
+            </div>
+            <div class="brands__flex">
+              <img src="img/brands/1.svg" class="brands__icon">
+              <img src="img/brands/2.svg" class="brands__icon">
+              <img src="img/brands/3.svg" class="brands__icon">
+              <img src="img/brands/4.svg" class="brands__icon">
+              <img src="img/brands/5.svg" class="brands__icon">
+              <img src="img/brands/6.svg" class="brands__icon">
+              <img src="img/brands/7.svg" class="brands__icon">
+              <img src="img/brands/8.svg" class="brands__icon">
+              <img src="img/brands/9.svg" class="brands__icon">
+              <img src="img/brands/10.svg" class="brands__icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="services__title">Услуги и цены <span style="color:#498DD8;"><br class="none">Bjorn Motors</span></div>
+          <div class="services__subtitle">Действуют скидки, поэтому точную цену уточняйте у мастера-приёмщика</div>
+          <form action="" class="services__search">
+            <input type="text" class="services__search__input" placeholder="Поиск услуги...">
+          </form>
+          <div class="services__flex">
+            <nav class="services__menu">
+              <ul class="services__menu__list">
+                <li class="services__menu__item services__btn1">
+                  <img src="img/services/6.svg" class="services__menu__icon">
+                  <div class="services__menu__title">Диагностика</div>
+                </li>
+                <li class="services__menu__item services__btn2">
+                  <img src="img/services/5.svg" class="services__menu__icon">
+                  <div class="services__menu__title">Трансмиссия</div>
+                </li>
+                <li class="services__menu__item services__btn3">
+                  <img src="img/services/4.svg" class="services__menu__icon">
+                  <div class="services__menu__title">Покраска</div>
+                </li>
+                <li class="services__menu__item services__btn4">
+                  <img src="img/services/3.svg" class="services__menu__icon">
+                  <div class="services__menu__title">Сход-развал</div>
+                </li>
+                <li class="services__menu__item services__btn5">
+                  <img src="img/services/2.svg" class="services__menu__icon">
+                  <div class="services__menu__title">Ремонт ДВС</div>
+                </li>
+                <li class="services__menu__item services__btn6">
+                  <img src="img/services/1.svg" class="services__menu__icon">
+                  <div class="services__menu__title">Тормозная система</div>
+                </li>
+              </ul>
+            </nav>
+            <div class="services__list services__list1 servicer__list-fixed">
+              <img src="img/icons/close.svg" class="services__list__close">
+              <div class="services__list__wrapp">
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных колодок (дисковые тормоза)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных колодок (барабанные тормоза)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+              </div>
+            </div>
+            <div class="services__list services__list2">
+              <img src="img/icons/close.svg" class="services__list__close">
+              <div class="services__list__wrapp">
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных колодок (барабанные тормоза)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+              </div>
+            </div>
+            <div class="services__list services__list3">
+              <img src="img/icons/close.svg" class="services__list__close">
+              <div class="services__list__wrapp">
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+              </div>
+            </div>
+            <div class="services__list services__list4">
+              <img src="img/icons/close.svg" class="services__list__close">
+              <div class="services__list__wrapp">
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+              </div>
+            </div>
+            <div class="services__list services__list5">
+              <img src="img/icons/close.svg" class="services__list__close">
+              <div class="services__list__wrapp">        
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+              </div>
+            </div>
+            <div class="services__list services__list6">
+              <img src="img/icons/close.svg" class="services__list__close">
+              <div class="services__list__wrapp">    
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Замена тормозных дисков (1 ось)</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Диагностика тормозной системы</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+                <div class="services__list__item">
+                  <div class="services__list__title">Проверка состояния тормозной жидкости</div>
+                  <div class="services__list__price">1200 р</div>
+                </div>
+              </div>
+            </div>
+            <form action="" class="services__form" method="post">
+              <div class="services__form__wrapp">
+                <div class="services__form__title">Узнайте стоимость ремонта за 10 мин.</div>
+                <div class="services__form__label">Номер вашего телефона</div>
+                <input type="hidden" name="titleform" value="Заявка Bjorn 'Узнать стоимость ремонта'">
+                <input type="text" class="services__form__input phone" name="phone" required placeholder="*обязательно">
+                <div class="services__form__label">VIN - номер автомобиля (17 знаков)</div>
+                <input type="text" class="services__form__input" name="vin" placeholder="необязательно">
+                <div class="services__form__label">Опишите неисправность</div>
+                <textarea required placeholder="*обязательно" name="comment" class="services__form__textarea"></textarea>
+                <button class="services__form__btn" type="submit">
+                  <span class="services__form__btn__text">
+                    Узнать стоимость
+                  </span>
+                </button>
+              </div>
+              <img src="img/services/phone.png" class="services__form__bg">
+            </form>
+          </div>
+          <div class="services__btn">
+            <div class="sercives__btn__text">Записаться на ремонт</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sale">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="sale__top">
+            <div class="sale__left">
+              <div class="sale__left__title">Акция месяца</div>
+              <div class="sale__left__subtitle">Снижаем цены на ремонт АКПП в августе на 20%</div>
+              <div class="sale__timer">
+                <div class="sale__timer__item">
+                  <div class="sale__timer__item__box">
+                    <div class="sale__timer__item__num">00</div>
+                    <div class="sale__timer__item__text">дней</div>
+                  </div>
+                  <div class="sale__timer__item__box">
+                    <div class="sale__timer__item__num">08</div>
+                    <div class="sale__timer__item__text">часов</div>
+                  </div>
+                  <div class="sale__timer__item__box">
+                    <div class="sale__timer__item__num">17</div>
+                    <div class="sale__timer__item__text">минут</div>
+                  </div>
+                </div>
+                <div class="sale__timer__item">
+                  <div class="sale__timer__item__label">
+                    Скидка <s>10%</s> <span style="color: #4AC936;">20%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sale__left__btn">Записаться</div>
+            </div>
+            <div class="sale__right">
+              <img src="img/sale/motor.png" class="sale__right__img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row sale__bottom">
+        <div class="col-12">
+          <div class="sale__title">Текущие акции</div>
+          <div class="sale__subtitle">Не имей 100 рублей, а имей 100 друзей</div>
+        </div>
+      </div>
+      <div class="row sale__slider">
+        <div class="col-sm-12 col-md-4">
+          <div class="sale__box sale__box1">
+            <div class="sale__box__item">
+              <div class="sale__box__title">
+                Диагностика по 75 <br>
+                пунктам бесплатно при <br>
+                первом посещении!
+              </div>
+              <div class="sale__box__btn">Записаться</div>
+            </div>
+          </div>  
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="sale__box sale__box2">
+            <div class="sale__box__item">
+              <div class="sale__box__title">
+                Регулировка сход-развала <br>
+                одна ось - 1500р. <br>
+                две оси - 2400р.
+              </div>
+              <div class="sale__box__btn">Записаться</div>
+            </div>
+          </div>  
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="sale__box sale__box3">
+            <div class="sale__box__item">
+              <div class="sale__box__title">
+                Гарантия <br>
+                на все виды работ <br>
+                1 год
+              </div>
+              <div class="sale__box__btn">Записаться</div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="team__top">
+            <div class="team__left">
+              <div class="team__left__title">Мы собрали команду профессионалов</div>
+              <div class="team__left__subtitle">
+                Основу нашего коллектива составляют механики с большим стажем работы
+              </div>
+            </div>
+            <div class="team__right">
+              <div class="team__right__flex">
+                <div class="team__right__line">
+                  <img src="img/team/1.png" class="team__ava">
+                  <img src="img/team/2.png" class="team__ava">
+                  <img src="img/team/3.png" class="team__ava">
+                  <img src="img/team/4.png" class="team__ava">
+                </div>
+                <div class="team__right__line">
+                  <img src="img/team/5.png" class="team__ava">
+                  <img src="img/team/6.png" class="team__ava">
+                  <img src="img/team/7.png" class="team__ava">
+                  <img src="img/team/8.png" class="team__ava">
+                </div>
+                <div class="team__right__line">
+                  <img src="img/team/9.png" class="team__ava">
+                  <img src="img/team/10.png" class="team__ava">
+                  <img src="img/team/11.png" class="team__ava">
+                  <img src="img/team/12.png" class="team__ava">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team__bottom">
+            <div class="team__bottom__box">
+              <div class="team__item">
+                <img src="img/team/1.svg" class="team__item__icon">
+                <div class="team__item__title">Опыт от 5 лет</div>
+              </div>
+              <div class="team__bottom__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra mauris urna ut at.
+              </div>
+            </div>
+            <div class="team__bottom__box">
+              <div class="team__item">
+                <img src="img/team/2.svg" class="team__item__icon">
+                <div class="team__item__title">Мастерство</div>
+              </div>
+              <div class="team__bottom__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra mauris urna ut at.
+              </div>
+            </div>
+            <div class="team__bottom__box">
+              <div class="team__item">
+                <img src="img/team/3.svg" class="team__item__icon">
+                <div class="team__item__title">Ответственность</div>
+              </div>
+              <div class="team__bottom__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra mauris urna ut at.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="about__flex">
+            <div class="about__left">
+              <div class="about__title">
+                Наш техцентр расположен на охраняемой территории автозавода
+              </div>
+              <div class="about__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat <span style="color:#4AC936;">consectetur</span> enim, consequat ultrices netus adipiscing. Amet venenatis, est augue aliquet. Eget hendrerit suspendisse luctus massa viverra quam orci ipsum, arcu. 
+                </p>
+                <p>
+                  Orci felis, bibendum <span style="color:#4AC936;">habitant</span> scelerisque feugiat vitae curabitur amet quam. Odio mauris eu egestas sit sed tortor semper. Feugiat duis vestibulum sit justo, et semper augue pharetra. 
+                </p>
+              </div>
+              <img src="img/about/bear.svg" class="about__left__img">
+            </div>
+            <div class="about__right">
+              <img src="img/about/img.jpg" class="about__right__img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="examples">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="examples__title">Примеры работ</div>
+          <div class="examples__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit vitae platea.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-lg-4">
+          <div class="examples__item">
+            <a data-fancybox="examples__gallery" href="img/examples/1.jpg">
+              <img src="img/icons/zoom.svg" class="fancy__zoom">
+              <img src="img/examples/1.jpg" class="examples__img">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4">
+          <div class="examples__item">
+            <a data-fancybox="examples__gallery" href="img/examples/2.jpg">
+              <img src="img/icons/zoom.svg" class="fancy__zoom">
+              <img src="img/examples/2.jpg" class="examples__img">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4">
+          <div class="examples__item">
+            <a data-fancybox="examples__gallery" href="img/examples/3.jpg">
+              <img src="img/icons/zoom.svg" class="fancy__zoom">
+              <img src="img/examples/3.jpg" class="examples__img">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4">
+          <div class="examples__item">
+            <a data-fancybox="examples__gallery" href="img/examples/4.jpg">
+              <img src="img/icons/zoom.svg" class="fancy__zoom">
+              <img src="img/examples/4.jpg" class="examples__img">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4">
+          <div class="examples__item">
+            <a data-fancybox="examples__gallery" href="img/examples/5.jpg">
+              <img src="img/icons/zoom.svg" class="fancy__zoom">
+              <img src="img/examples/5.jpg" class="examples__img">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4">
+          <div class="examples__item">
+            <a data-fancybox="examples__gallery" href="img/examples/6.jpg">
+              <img src="img/icons/zoom.svg" class="fancy__zoom">
+              <img src="img/examples/6.jpg" class="examples__img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="reviews__flex">
+            <div class="reviews__title">Отзывы</div>
+            <div class="reviews__right">
+              <div class="reviews__stars">
+                <img src="img/reviews/star.svg" class="reviews__star">
+                <img src="img/reviews/star.svg" class="reviews__star">
+                <img src="img/reviews/star.svg" class="reviews__star">
+                <img src="img/reviews/star.svg" class="reviews__star">
+                <img src="img/reviews/star.svg" class="reviews__star">
+              </div>
+              <div class="reviews__right__text">настоящие</div>
+            </div>
+          </div>
+          <div class="reviews__subtitle">
+            Лучшая оценка нашей работы - это отзывы наших клиентов!
+          </div>
+          <div class="reviews__slider">
+            <div class="reivews__slide">
+              <img src="img/reviews/ava1.png" class="reviews__slide__ava">
+              <div class="reviews__slide__text">
+                Приезжал делать сход-развал. Быстро и качественно. Профессиональное оборудование. Сервис чистый и акуратный. Понравилось обслуживание. Ребята молодые, шустрые.
+              </div>
+              <div class="reviews__slider__name">Сергей Смирнов</div>
+            </div>
+            <div class="reivews__slide">
+              <img src="img/reviews/ava1.png" class="reviews__slide__ava">
+              <div class="reviews__slide__text">
+                Приезжал делать сход-развал. Быстро и качественно. Профессиональное оборудование. Сервис чистый и акуратный. Понравилось обслуживание. Ребята молодые, шустрые.
+              </div>
+              <div class="reviews__slider__name">Сергей Смирнов</div>
+            </div>
+            <div class="reivews__slide">
+              <img src="img/reviews/ava1.png" class="reviews__slide__ava">
+              <div class="reviews__slide__text">
+                Приезжал делать сход-развал. Быстро и качественно. Профессиональное оборудование. Сервис чистый и акуратный. Понравилось обслуживание. Ребята молодые, шустрые.
+              </div>
+              <div class="reviews__slider__name">Сергей Смирнов</div>
+            </div>
+            <div class="reivews__slide">
+              <img src="img/reviews/ava1.png" class="reviews__slide__ava">
+              <div class="reviews__slide__text">
+                Приезжал делать сход-развал. Быстро и качественно. Профессиональное оборудование. Сервис чистый и акуратный. Понравилось обслуживание. Ребята молодые, шустрые.
+              </div>
+              <div class="reviews__slider__name">Сергей Смирнов</div>
+            </div>
+            <div class="reivews__slide">
+              <img src="img/reviews/ava1.png" class="reviews__slide__ava">
+              <div class="reviews__slide__text">
+                Приезжал делать сход-развал. Быстро и качественно. Профессиональное оборудование. Сервис чистый и акуратный. Понравилось обслуживание. Ребята молодые, шустрые.
+              </div>
+              <div class="reviews__slider__name">Сергей Смирнов</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="social">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="social__title">Мы в социальных сетях</div>
+          <div class="social__subtitle"># Bjorn_Motors</div>
+          <div class="social__gallery">
+            <div class="social__gallery__item">
+              <a data-fancybox href="https://www.youtube.com/watch?v=CptDGw4X3bM">
+                <img src="img/icons/play.svg" class="fancy__play fancy__zoom">
+                <img src="img/social/1.jpg" class="social__img">
+              </a>
+            </div>
+            <div class="social__gallery__item">
+              <a data-fancybox="social__gallery" href="img/social/2.jpg">
+                <img src="img/icons/zoom.svg" class="fancy__zoom">
+                <img src="img/social/2.jpg" class="social__img">
+              </a>
+            </div>
+            <div class="social__gallery__item">
+              <a data-fancybox="social__gallery" href="img/social/3.jpg">
+                <img src="img/icons/zoom.svg" class="fancy__zoom">
+                <img src="img/social/3.jpg" class="social__img">
+              </a>
+            </div>
+            <div class="social__gallery__item">
+              <a data-fancybox="social__gallery" href="img/social/4.jpg">
+                <img src="img/icons/zoom.svg" class="fancy__zoom">
+                <img src="img/social/4.jpg" class="social__img">
+              </a>
+            </div>
+            <div class="social__gallery__item">
+              <a data-fancybox="social__gallery" href="img/social/5.jpg">
+                <img src="img/icons/zoom.svg" class="fancy__zoom">
+                <img src="img/social/5.jpg" class="social__img">
+              </a>
+            </div>
+            <div class="social__gallery__item">
+              <a data-fancybox href="https://www.youtube.com/watch?v=CptDGw4X3bM">
+                <img src="img/icons/play.svg" class="fancy__play fancy__zoom">
+                <img src="img/social/6.jpg" class="social__img">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="feedback">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form action="" class="feedback__form" method="post">
+            <div class="feedback__form__title">
+              Ваши предложения и пожелания руководству техцентра
+            </div>
+            <div class="feedback__form__subtitle">
+              Мы ценим каждого клиента и для нас важно ваше мнение
+            </div>
+            <div class="feeedback__form__flex">
+              <div class="feedback__form__left">
+                <input type="hidden" name="titleform" value="Заявка Bjorn 'Предложение пользователя'">
+                <div class="feedback__form__label">Ваше имя</div>
+                <input type="text" class="feedback__form__input" name="name" required placeholder="*обязательно">
+                <div class="feedback__form__label">Номер вашего телефона</div>
+                <input type="text" class="feedback__form__input" name="phone" required placeholder="*обязательно">
+              </div>
+              <div class="feedback__form__right">
+                <textarea class="feedback__form__textarea" name="opinion" required placeholder="*напишите здесь ваши предложения"></textarea>
+              </div>
+            </div>
+            <button class="feedback__form__btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="contacts__wrapp">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="contacts__box">
+                <div class="contacts__title">Контакты</div>
+                <div class="contacts__address">
+                  Москва, ул.Уличная, д.2 стр.3
+                </div>
+                <a href="tel:+74954774747" class="contacts__tel">+7 (495) 477-47-47</a>
+                <a href="mailto:info@bjorn-motors.ru" class="contacts__mail">info@bjorn-motors.ru</a>
+                <div class="contacts__socials">
+                  <a href="#">
+                    <img src="img/icons/telephone.svg" class="contacts__phone">
+                  </a>
+                  <a href="#">
+                    <img src="img/header/whatsapp-hover.svg" class="contacts__social">
+                  </a>
+                  <a href="#">
+                    <img src="img/header/telegram-hover.svg" class="contacts__social">
+                  </a>
+                  <a href="#">
+                    <img src="img/header/viber-hover.svg" class="contacts__social">
+                  </a>
+                  <a href="#">
+                    <img src="img/header/instagram-hover.svg" class="contacts__social">
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__map__overlay"></div>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A238cc26bf6bc62c6ec218ed43ac8b13eac2ca2f1e2f13dc53f1bd6bf2d539415&amp;source=constructor;scroll=false;" width="100%" height="400" frameborder="0" class="contacts__map"></iframe>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer__main">
+            <div class="footer__item">
+              <div class="footer__logo">
+                <img src="img/header/logo.svg" class="footer__logo__icon">
+                <img src="img/header/logo-title.svg" class="footer__logo__title">
+              </div>
+              <div class="footer__text">
+                Техцентр по обслуживанию, ремонту и тюнингу автомобилей всех марок
+                <br><br>
+                Работаем с <span class="footer__bold">09:00</span> до <span class="footer__bold">21:00</span><br>
+                без выходных и праздников
+              </div>
+              <div class="footer__social">
+                <a href="#" class="footer__social__link">
+                  <img src="img/icons/youtube.svg" class="footer__social__icon footer__youtube">
+                </a>
+                <a href="#" class="footer__social__link">
+                  <img src="img/icons/instagram.svg" class="footer__social__icon footer__instagram">
+                </a>
+                <a href="#" class="footer__social__link">
+                  <img src="img/icons/facebook.svg" class="footer__social__icon footer__facebook">
+                </a>
+                <a href="#" class="footer__social__link">
+                  <img src="img/icons/vk.svg" class="footer__social__icon footer__vk">
+                </a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__name footer__name-btn1">
+                <div class="footer__name__title">
+                  Электрика
+                </div>
+                <img src="img/services/arrow.svg" class="footer__name__icon footer__arrow1">
+              </div>
+              <ul class="footer__list footer__list1">
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Кодирование блоков
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Программирование электронных блоков управления
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Русификация бортового компьютера
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Сканирование (считывание) ошибок
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Обновление программного обеспечения
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__item footer__margin">
+              <div class="footer__name footer__name-btn2">
+                <div class="footer__name__title">
+                  Ремонт двигателей
+                </div>
+                <img src="img/services/arrow.svg" class="footer__name__icon footer__arrow2">
+              </div>
+              <ul class="footer__list footer__list2">
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Кодирование блоков
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Программирование электронных блоков управления
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Русификация бортового компьютера
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Сканирование (считывание) ошибок
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Обновление программного обеспечения
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__item footer__margin">
+              <div class="footer__name footer__name-btn3">
+                <div class="footer__name__title">
+                  Ремонт АКПП
+                </div>
+                <img src="img/services/arrow.svg" class="footer__name__icon footer__arrow3">
+              </div>
+              <ul class="footer__list footer__list3">
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Кодирование блоков
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Программирование электронных блоков управления
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Русификация бортового компьютера
+                  </a>
+                </li>
+                <li class="footer__list__item">
+                  <a href="" class="footer__link">
+                    Сканирование (считывание) ошибок
+                  </a>
+                </li>
+              </ul>
+              <div class="footer__pay">
+                <img src="img/icons/visa.svg" class="footer__pay__icon">
+                <img src="img/icons/maestro.svg" class="footer__pay__icon">
+                <img src="img/icons/mastercard.svg" class="footer__pay__icon">
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">Bjorn-Motors © 2020  Все права защищены</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+
+  <!-- Pushy JS -->
+  <script type="text/javascript" src="lib/pushy/pushy.min.js"></script>
+
+  <!-- Slick JS -->
+  <script type="text/javascript" src="lib/slick/slick.min.js"></script>
+
+  <!-- Wow JS -->
+  <script src="lib/wow/wow.min.js"></script>
+
+  <!-- Masked Input -->
+  <script src="lib/maskinput/jquery.maskedinput.min.js"></script>
+
+  <!-- Masked Input -->
+  <script src="lib/fancybox/jquery.fancybox.min.js"></script>
+
+  <!-- Countdown -->
+  <script src="js/countdown.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

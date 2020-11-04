@@ -1,0 +1,68 @@
+.webpServerInfo {
+  color: #222;
+  text-align: center;
+
+  /* ---
+    phpinfo() styles
+  --- */
+
+  pre {
+    margin: 0;
+    font-family: monospace;
+  }
+
+  h1, h2 {
+    display: none;
+  }
+
+  p {
+    max-width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  td, th {
+    border: 1px solid #666;
+    vertical-align: baseline;
+    padding: 4px 5px;
+    font-size: 12px;
+    line-height: 1.67;
+    text-align: center;
+  }
+
+  .p {
+    text-align: left;
+  }
+
+  .e {
+    background-color: #ccf;
+    width: 300px;
+    font-weight: bold;
+  }
+
+  .h {
+    background-color: #99c;
+    font-weight: bold;
+  }
+
+  .v {
+    background-color: #ddd;
+    max-width: 300px;
+    overflow-x: auto;
+    word-wrap: break-word;
+  }
+
+  .v i {
+    color: #999;
+  }
+
+  img {
+    float: right;
+    border: 0;
+  }
+}

@@ -214,7 +214,7 @@
     ?>
   </header>
   <nav class="main-menu">
-    <ul class="main-menu__list">
+    <!-- <ul class="main-menu__list">
       <li class="main-menu__item">
         <a href="/" class="main-menu__link">Главная</a>
       </li>
@@ -230,7 +230,26 @@
       <li class="main-menu__item">
         <a href="../#contacts" class="main-menu__link">Контакты</a>
       </li>
-    </ul>
+    </ul> -->
+    <?php
+    $menuM = wp_nav_menu([
+      'theme_location'  => '',
+      'menu'            => 'uslugi',
+      'container'       => 'false',
+      'menu_class'      => 'main-menu__list',
+      'menu_id'         => '',
+      'echo'            => true,
+      'fallback_cb'     => 'wp_page_menu',
+      'before'          => '',
+      'after'           => '',
+      'link_before'     => '',
+      'link_after'      => '',
+      'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      'depth'           => 0,
+      'walker'          => '',
+    ]);
+    ?>
+
     <div class="menu__mobile">
       <div class="container">
         <div class="row">

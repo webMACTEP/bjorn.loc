@@ -368,12 +368,17 @@ a:hover {
 /*main-menu*/
 .main-menu {
     background: #04224e;
-    padding: 15px 0;
+    /* padding: 15px 0; */
 }
 .main-menu__list {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.main-menu__list li {
+    text-transform: uppercase;
+    margin: 0 15px 0 15px;
+    line-height: 40px;
 }
 .main-menu__item {
     margin-right: 35px;
@@ -1551,8 +1556,43 @@ a:hover .fancy__zoom {
     object-fit: cover;
     margin-left: 35px;
 }
+.menu-item {
+    position: relative;
+}
+.menu-item a {
+}
+.menu-item a:hover {
+    color: #f56048;
+    transition: 0.3s;
+}
+.menu-item-567:hover > .sub-menu {
+    visibility: visible;
+}
 .sub-menu {
-    font-size: 12px;
-    margin-left: 10px;
-    color: rgb(71, 11, 11);
+    visibility: hidden;
+    width: 350px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+    background: #0f2d58;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+.sub-menu:hover {
+    visibility: visible;
+}
+.sub-menu li {
+    font-size: 15px;
+    border-bottom: 1px solid #000;
+    text-transform: none;
+}
+
+.sub-menu li a:hover {
+    color: #f56048;
+}
+.sub-menu li::before {
+    content: "-";
+    margin-right: 20px;
+    color: #fff;
 }

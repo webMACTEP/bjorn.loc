@@ -5,7 +5,7 @@
 /* Menu Appearance */
 .pushy {
   position: fixed;
-  width: 200px;
+  width: 300px;
   height: 100%;
   top: 0;
   z-index: 9999;
@@ -21,7 +21,7 @@
   text-decoration: none;
 }
 .pushy a:hover {
-  color: #FFF;
+  color: #fff;
 }
 .pushy ul:first-child {
   margin-top: 10px;
@@ -41,7 +41,7 @@
 .pushy-left {
   -webkit-transform: translate3d(-200px, 0, 0);
   -ms-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-300px, 0, 0);
 }
 
 .pushy-open-left #container,
@@ -142,7 +142,7 @@
   border: 0;
 }
 .pushy-submenu button:hover {
-  color: #FFF;
+  color: #fff;
 }
 .pushy-submenu > a,
 .pushy-submenu > button {
@@ -150,7 +150,7 @@
 }
 .pushy-submenu > a::after,
 .pushy-submenu > button::after {
-  content: '';
+  content: "";
   display: block;
   height: 11px;
   width: 8px;
